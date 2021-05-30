@@ -1,0 +1,79 @@
+﻿@Model
+
+<link href="~/css/ChartPie.css" rel="stylesheet" />
+<link href="~/css/Column comparison.css" rel="stylesheet" />
+<link href="~/css/site.css" rel="stylesheet" />
+<link href="~/css/chartTempTokio.css" rel="stylesheet" />
+<link href="~/css/CombinationChart.css" rel="stylesheet" />
+
+
+
+<div class="charts">
+    <div class="chart1 chart">
+        <figure class="highcharts-figure">
+            <div id="container1"></div>
+            <p class="highcharts-description">
+                This pie chart shows how the chart legend can be used to provide
+                information about the individual slices.
+            </p>
+        </figure>
+    </div>
+    <div class="chart3 chart">
+        <figure class="highcharts-figure">
+            <div id="container2"></div>
+            <p class="highcharts-description">
+                Chart showing a combination of a column and a line chart, using multiple
+                y-axes. Using multiple axes allows for data within different ranges to
+                be visualized together.
+            </p>
+        </figure>
+    </div>
+
+    <div class="chart2 chart">
+        <div class="buttons">
+            <button id="2000">
+                2000
+            </button>
+            <button id="2004">
+                2004
+            </button>
+            <button id="2008">
+                2008
+            </button>
+            <button id="2012">
+                2012
+            </button>
+            <button id="2016" class="active">
+                2016
+            </button>
+        </div>
+        <div id="container"></div>
+    </div>
+    <div class="chart4 chart">
+        <figure class="highcharts-figure">
+            <div id="container4"></div>
+            <p class="highcharts-description">
+                Chart showing how different series types can be combined in a single
+                chart. The chart is using a set of column series, overlaid by a line and
+                a pie series. The line is illustrating the column averages, while the
+                pie is illustrating the column totals.
+            </p>
+        </figure>
+    </div>
+
+</div>
+
+
+@section Scripts{
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script>  var urlBase = 'https://' + '@Context.Request.Host' + '@Context.Request.Path' </script>
+
+    <script src="~/js/ChrartPie.js"></script>
+    <script src="~/js/ColumnComparison.js"></script>
+    <script src="~/js/chartTempTokio.js"></script>
+    <script src="~/js/CombinationChart.js"></script>
+
+}
